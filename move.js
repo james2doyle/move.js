@@ -1,4 +1,3 @@
-
 /*!
  * move
  * Copyright(c) 2011 TJ Holowaychuk <tj@vision-media.ca>
@@ -259,6 +258,25 @@
     return this.transform('translate('
       + x + 'px, '
       + y + 'px)');
+  };
+  
+  /**
+   * Translate3d `x` `y` and `z` axis.
+   *
+   * @param {Number} x
+   * @param {Number} y
+   * @param {Number} z
+   * @return {Move} for chaining
+   * @api public
+   */
+
+  Move.prototype.translate3d = 
+  Move.prototype.to = function(x, y, z){
+    z = z || 0;
+    return this.transform('translate3d('
+      + x + 'px, '
+      + y + 'px, '
+      + z + 'px)');
   };
 
   /**
